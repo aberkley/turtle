@@ -162,13 +162,3 @@ def draw_fast_sierpinski_square(levels, size, color):
         draw_fast_squares(level, size)
 
 
-bob = turtle.Turtle()
-bob.speed(0)
-bob.penup()
-bob.setx(-300)
-bob.sety(-300)
-bob.pendown()
-#draw_fast_sierpinski_square(4, 500, 'red')
-#draw_rainbow_polygons(100)
-#draw_triangle(50, 'green', 'up')
-turtle.done()
