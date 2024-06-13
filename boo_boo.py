@@ -25,21 +25,22 @@ def draw_square_grid(level, size, color):
             ivy.left(90)
 
 
-def draw_random_line():
+def draw_random_line(max_size=100):
     color = random.choice(['navy blue', 'red', 'orange', 'yellow', 'green', 'violet', 'magenta', 'black'])
-    size = random.randint(100, 300)
-    angle = random.randint(25,360)
+    size = random.randint(10, max_size)
+    angle = random.randint(1,360)
     ivy.color(color)
     ivy.left(angle)
     ivy.forward(size)
 
-def draw_random_lines(number):
+
+def draw_random_lines(number, max_size=100):
     for i in range(number):
-        draw_random_line()
+        draw_random_line(max_size=max_size)
 
 
 ivy = turtle.Turtle()
 ivy.speed(0)
 #draw_square_grid(10, 250, 'navy blue')
-draw_random_lines(5)
+draw_random_lines(100, max_size=50)
 turtle.done()
