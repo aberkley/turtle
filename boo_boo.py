@@ -24,9 +24,13 @@ def draw_square_grid(level, size, color):
             ivy.forward(size)
             ivy.left(90)
 
-
 def draw_random_line(max_size=100, last_color=None):
-    color = random.choice(['navy blue', 'red', 'orange', 'yellow', 'green', 'violet', 'magenta', 'black'])
+    colors = ['navy blue', 'red', 'orange', 'yellow', 'green', 'violet', 'magenta', 'black']
+    filtered_colors = []
+    for color in colors:
+        if last_color != color:
+            filtered_colors.append(color)
+    color = random.choice(filtered_colors)
     size = random.randint(10, max_size)
     angle = random.randint(1,360)
     ivy.color(color)
