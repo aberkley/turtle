@@ -30,30 +30,58 @@ def draw_circular_rings(level, size, n, r):
             bob.backward(size)
 
 
+def draw_face():
+    bob.pendown()
+    bob.begin_fill()
+    draw_circle(100)
+    bob.color()
+    bob.end_fill()
+    bob.penup()
+def draw_ear():
+    #TODO: close the triangle
+
+    bob.pendown()
+    bob.begin_fill()
+    bob.forward(60)
+    bob.left(120)
+    bob.forward(60)
+    bob.left(120)
+    bob.forward(60)
+    bob.end_fill()
+    bob.penup()
+
+
+def draw_ears():
+    pass
+    #TODO:alex for over ears
+
+
 bob = turtle.Turtle()
-bob.speed(0)
+bob.speed(10)
+bob.color('red' 'red')
 #TODO: put your code here...
 #draw a ring
 #draw more rings on that ring and so on
 #draw_circular_rings(3, 100, 10, 2.5)
-draw_circle(100)
+
+draw_face()
+
 bob.left(90)
 bob.forward(100)
 bob.left(45)
-bob.pendown()
-bob.forward(60)
-bob.left(120)
-bob.forward(70)
-bob.penup()
+
+draw_ear()
+
 bob.left(100)
 bob.forward(145)
 bob.left(90)
-bob.pendown()
-bob.forward(70)
-bob.left(120)
-bob.forward(79)
 
+#bob.pendown()
+#bob.forward(70)
+#bob.left(120)
+#bob.forward(79)
 
+draw_ear()
 turtle.done()
 #TODO
 #1 cat drawing
