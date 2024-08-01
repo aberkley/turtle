@@ -1,9 +1,9 @@
 import math
 
 
-HELENA_BALANCE = 1174
+HELENA_BALANCE = 1100
 
-SOFIA_BALANCE = 1352
+SOFIA_BALANCE = 1300
 
 
 def figure_out_interest(cash_at_start, interest_rate, number_of_weeks):
